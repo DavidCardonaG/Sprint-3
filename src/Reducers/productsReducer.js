@@ -12,7 +12,7 @@ export const productsReducer = (state = initialState, action) => {
             }
         case typesProduct.listar:
             return{
-                productos:[...action.payload]
+                productos:[action.payload]
             }
         case typesProduct.eliminar:
             return{
