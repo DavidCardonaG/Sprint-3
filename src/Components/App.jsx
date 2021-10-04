@@ -2,6 +2,7 @@ import React from "react";
 import ListarProductos from "../Components/ListarProductos";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../Actions/actionLogin";
+import Footer from '../Components/Footer'
 const App = () => {
     const dispatch = useDispatch();
   const handleLogout = () => {
@@ -31,6 +32,8 @@ const App = () => {
           Logout
         </button>
       </div>
+
+      <Footer/>
     </div>
   );
 };
