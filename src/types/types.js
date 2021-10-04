@@ -3,3 +3,10 @@ export const types = {
      register: 'register',
      logout: 'logout',
 }
+
+
+export const typesProduct = {
+    register: 'register',
+    listar: 'listar',
+    eliminar: 'eliminar'
+}

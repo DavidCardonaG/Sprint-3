@@ -1,22 +1,38 @@
-import React from 'react';
+import React from "react";
+import ListarProductos from "../Components/ListarProductos";
+import { useDispatch } from "react-redux";
+import { startLogout } from "../Actions/actionLogin";
 const App = () => {
-    return (
-        <div>
-            <div className="items">
-                <button id="one" className="btn-items"><i id="fas" class="fas fa-bars"></i>Todo</button>
-                <button className="btn-items">Tarjeta de Regalo</button>
-                <button className="btn-items">Prime</button>
-                <button className="btn-items">Lo Más Vendido</button>
-                <button className="btn-items">Amazonas Basics</button>
-                <button className="btn-items">Cómputo y Tabletas</button>
-                <button className="btn-items">Los Más Regalados</button>
+    const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(startLogout());
+  };
+  return (
+    <div>
+      <div className="items">
+        <button id="one" className="btn-items">
+          <i id="fas" class="fas fa-bars"></i>Todo
+        </button>
+        <button className="btn-items">Tarjeta de Regalo</button>
+        <button className="btn-items">Prime</button>
+        <button className="btn-items">Lo Más Vendido</button>
+        <button className="btn-items">Amazonas Basics</button>
+        <button className="btn-items">Cómputo y Tabletas</button>
+        <button className="btn-items">Los Más Regalados</button>
+      </div>
 
-            </div>
-            <h1 className="title">AMAZONAS</h1>
-            <p className="description">Design By David</p>
-            
-        </div>
-    )
-}
+      <ListarProductos />
+      <div>
+        <button
+          className="btn btn-primary"
+          type="button"
+          onClick={handleLogout}
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default App;
