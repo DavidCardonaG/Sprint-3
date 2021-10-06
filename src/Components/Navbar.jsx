@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../Actions/actionLogin";
+import {loginSincrono} from '../Actions/actionLogin'
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Navbar = () => {
           alt="logo-amazonas"
         />
         <div className="ubicacion">
-          <p className="p-navbar">Hola</p>
+          <p className="p-navbar">Hola,{loginSincrono}</p>
           <button className="btn-navbar">
             <i class="far fa-map-marker-alt"></i> Elige tu dirección
           </button>

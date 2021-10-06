@@ -1,8 +1,8 @@
 import React from "react";
-import ListarProductos from "../Components/ListarProductos";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../Actions/actionLogin";
-import Footer from '../Components/Footer'
+import ListarProductos from "../Components/ListarProductos";
 const App = () => {
     const dispatch = useDispatch();
   const handleLogout = () => {
@@ -14,6 +14,9 @@ const App = () => {
 const handleRegalo = () => {
     window.location = 'https://www.amazon.com/-/es/Gift-Cards/b/ref=amb_link_13?ie=UTF8&node=2864196011&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-leftnav&pf_rd_r=DQFSRJHEQMK2T4S8AD2M&pf_rd_r=DQFSRJHEQMK2T4S8AD2M&pf_rd_t=101&pf_rd_p=6fab5752-891e-4843-b52b-1bf92c8211b3&pf_rd_p=6fab5752-891e-4843-b52b-1bf92c8211b3&pf_rd_i=10232440011'
 }
+// const handleRegistro = () =>{
+//   window.location = <ListarProductos/>
+// }
   return (
     <div>
       <div className="items">
@@ -26,9 +29,10 @@ const handleRegalo = () => {
         <button className="btn-items">Amazonas Basics</button>
         <button className="btn-items">Cómputo y Tabletas</button>
         <button className="btn-items">Los Más Regalados</button>
+        <Link className="btn-items" to="/productos">Registra Tus Productos</Link>
       </div>
 
-      <ListarProductos />
+      <ListarProductos/>
       <div>
         <button
           className="btn btn-primary"
@@ -38,8 +42,6 @@ const handleRegalo = () => {
           Logout
         </button>
       </div>
-
-      <Footer/>
     </div>
   );
 };

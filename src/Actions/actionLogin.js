@@ -12,11 +12,9 @@ export const loginEmailPassword = (email,password) =>{
              dispatch(
                 loginSincrono(user.uid,user.displayName)
              ) 
-             console.log('Bienvenid@');
        })
        .catch(e =>{
            console.log(e);
-            console.log('El usuario no existe');
        })
     }
 }

@@ -271,6 +271,7 @@
   color: #ffffff;
   margin-left: 2rem;
   cursor: pointer;
+  text-decoration: none;
 }
 #one {
   margin-left: 2rem;
@@ -282,8 +283,8 @@
 .footer {
   width: 100%;
   height: 408px;
-  top: 2766px;
-  position: absolute;
+  bottom:0;
+  /* position: absolute; */
   background: #242f3e;
 }
 .container-footer {

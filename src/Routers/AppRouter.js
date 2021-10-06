@@ -13,6 +13,7 @@ import { AuthRouter } from "./AuthRouter";
 import {  getAuth,onAuthStateChanged } from "firebase/auth";
 import Loading from "../Components/Loading";
 import App from '../Components/App'
+import Productos from '../Components/Productos'
 
 export default function AppRouter() {
 
@@ -53,6 +54,12 @@ export default function AppRouter() {
                         exact
                         path="/"
                         component={App}
+                        isAuthenticated ={isLooggedIn}
+                    />
+                    <PrivateRoute
+                        exact
+                        path="/productos"
+                        component={Productos}
                         isAuthenticated ={isLooggedIn}
                     />
 
