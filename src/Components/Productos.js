@@ -53,27 +53,29 @@ import ListarProductos from '../Components/ListarProductos'
 
     return (
         <div>
-            <h1>BIENVENIDO A LA SECCIÓN DE REGISTRO DE PRODUCTOS DE AMAZONAS</h1>
-            <p>Nos agrada que seas nuestro aliado</p>
+            <h1 className="title-pro">BIENVENIDO A LA SECCIÓN DE REGISTRO DE PRODUCTOS DE AMAZONAS</h1>
+            <p className="pa-pro">Nos agrada que seas nuestro aliado</p>
 
-            <form onSubmit={handleRegistro}>
-                <h1>PRODUCTOS</h1>
+            <form  className="form" onSubmit={handleRegistro}>
+                <h1 className="ti-pro">PRODUCTOS</h1>
                 <div className="form-group">
-                    <div className="form-group col-md-4">
-                        <label htmlFor="documento">Nombre</label>
+                    <div >
+                        <label id="ti-label" htmlFor="documento">Nombre</label>
                         <input 
-                        className="form-control" 
-                        type="text" 
+                        placeholder="Nombre del producto"
+                        className="input-regis" 
+                        type="text"
                         name="nombre" 
                         id="nombre"
                         value={nombre}
                         onChange={handleInputChange} />
                     </div>
 
-                    <div className="form-group col-md-4">
-                        <label htmlFor="nombres">Precio</label>
+                    <div>
+                        <label id="ti-label" htmlFor="nombres">Precio</label>
                         <input 
-                        className="form-control" 
+                        placeholder="Precio del producto"
+                        className="input-regis"  
                         type="text" 
                         name="precio" 
                         id="precio"
@@ -81,10 +83,11 @@ import ListarProductos from '../Components/ListarProductos'
                         onChange={handleInputChange} />
                     </div>
 
-                    <div className="form-group col-md-4">
-                        <label htmlFor="telefono">Descripción</label>
+                    <div>
+                        <label id="ti-label" htmlFor="telefono">Descripción</label>
                         <input 
-                        className="form-control" 
+                        placeholder="Descripción del producto"
+                        className="input-regis" 
                         type="text" 
                         name="descripcion" 
                         id="descripcion"
@@ -93,7 +96,8 @@ import ListarProductos from '../Components/ListarProductos'
                     </div>
 
                     <br />
-                    <div className="form-group col-md-4">
+                    <div className="container-btn">
+                        <label id="ti-label" htmlFor="file">Cargar Imagen</label>
                         <input
                             id="fileSelector"
                             type="file"
@@ -102,13 +106,17 @@ import ListarProductos from '../Components/ListarProductos'
                             onChange={handleFileChanged}
                         />
 
-                        <button className="btn btn-success"
+                        <button className="btn-imagen"
                            onClick={handlePictureClick} type="button">Imagen</button>
                     </div>
 
                     <div>
-                        <button className="btn btn-primary"
+                        <button className="btn-guardar"
                             type="submit">Guardar</button>
+                    </div>
+                    <div>
+                        <button className="btn-cancelar"
+                        type="button">Cancelar</button>
                     </div>
 
                     {/* <div>

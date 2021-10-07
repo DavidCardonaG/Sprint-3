@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../Actions/actionLogin";
-import ListarProductos from "../Components/ListarProductos";
+import ProductoApp from '../Components/ProductoApp'
+import Footer from '../Components/Footer'
 const App = () => {
     const dispatch = useDispatch();
   const handleLogout = () => {
@@ -30,9 +31,9 @@ const handleRegalo = () => {
         <button className="btn-items">Cómputo y Tabletas</button>
         <button className="btn-items">Los Más Regalados</button>
         <Link className="btn-items" to="/productos">Registra Tus Productos</Link>
-      </div>
-
-      <ListarProductos/>
+        <Link className="btn-items" to="/contacto">Contacto</Link>
+      </div><br></br>
+      <ProductoApp/>
       <div>
         <button
           className="btn btn-primary"
@@ -42,6 +43,8 @@ const handleRegalo = () => {
           Logout
         </button>
       </div>
+      <Footer/>
+
     </div>
   );
 };

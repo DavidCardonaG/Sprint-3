@@ -10,3 +10,7 @@ export const typesProduct = {
     listar: 'listar',
     eliminar: 'eliminar'
 }
+
+export const typesProd = {
+    list: 'list'
+}
