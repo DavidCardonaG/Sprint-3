@@ -14,6 +14,10 @@ export const productsReducer = (state = initialState, action) => {
             return{
             productos:[...action.payload]
             }
+        case typesProduct.editar:
+            return{
+                productos:[...action.payload]
+            }
         case typesProduct.eliminar:
             return{
                 productos: state.productos.filter(pro => pro.nombre !== action.payload)

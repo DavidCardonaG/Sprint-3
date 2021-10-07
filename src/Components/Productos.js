@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
-// import { logout } from '../actions/actionLogin';
+import { Link } from "react-router-dom";
 import { useForm } from '../hooks/useForm';
 import { fileUpload } from '../helpers/FileUpload';
 import { registerProductos } from '../Actions/actionProducts';
@@ -25,12 +25,6 @@ import ListarProductos from '../Components/ListarProductos'
         reset();
     }
 
-
-    // const handleLogout = () => {
-    //     dispatch(logout());
-    //     history.replace('/login');
-    // }
-
     const handlePictureClick = () => {
          document.querySelector('#fileSelector').click();
     }
@@ -53,6 +47,7 @@ import ListarProductos from '../Components/ListarProductos'
 
     return (
         <div>
+            <Link className="back" to="/"><i id="fas" class="fas fa-arrow-left"></i></Link>
             <h1 className="title-pro">BIENVENIDO A LA SECCIÓN DE REGISTRO DE PRODUCTOS DE AMAZONAS</h1>
             <p className="pa-pro">Nos agrada que seas nuestro aliado</p>
 
@@ -118,11 +113,6 @@ import ListarProductos from '../Components/ListarProductos'
                         <button className="btn-cancelar" onClick={reset}
                         type="button">Cancelar</button>
                     </div>
-
-                    {/* <div>
-                        <button className="btn btn-primary" type="button"
-                            onClick={handleLogout}>Logout</button>
-                    </div> */}
 
                 </div>
             </form>

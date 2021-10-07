@@ -1,8 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { listProdAsincrono} from '../Actions/actionProd'
+import Swal from 'sweetalert2'
 import React,{useEffect} from "react";
 
 const ProductoApp = () => {
+    
   const dispatch = useDispatch();
 
   const { product } = useSelector((store) => store.product);
@@ -11,6 +13,19 @@ const ProductoApp = () => {
     dispatch(listProdAsincrono())
 }, [dispatch])
 
+const compra = () =>{
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Compra Realizada',
+        text:'Gracias por confiar en nosotros',
+        showConfirmButton: false,
+        timer: 2000
+      })
+}
+// $(function () {
+//     $('.img-grande').zoomy();
+// });
   return (
     <div>
       {product ? (
@@ -37,7 +52,7 @@ Solicita tu tarjeta Amazon Recargable y obtén $100 de descuento en tu primera c
                 <p className="envio">Envío GRATIS <a href="#">Detalles</a></p>
                 <p>LLega: Nov 8-17</p>
                 <p className="p-d">Puede que el envio se retrace un poco</p>
-                <button className="btn-c"><i class="fas fa-play"></i> Comprar Ahora</button>
+                <button onClick={compra} className="btn-c"><i class="fas fa-play"></i> Comprar Ahora</button>
                 <a  className="link-r" href="#">Transacción Segura</a>
 
             </div>

@@ -1,6 +1,6 @@
 import {typesProd} from '../types/types'
 import { db } from "../firebase/firebaseConfig";
-import { addDoc,collection,deleteDoc,doc,getDocs,query,where} from "@firebase/firestore";
+import { collection,getDocs} from "@firebase/firestore";
 
 
 export const listProdAsincrono = () =>{
@@ -21,3 +21,4 @@ export const listProd = (product) => {
         payload:product
     }
 }
+

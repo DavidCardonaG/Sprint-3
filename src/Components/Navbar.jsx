@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { startLogout } from "../Actions/actionLogin";
 import {loginSincrono} from '../Actions/actionLogin'
 
-const Navbar = () => {
+const Navbar = (user) => {
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(startLogout());
@@ -18,7 +18,7 @@ const Navbar = () => {
           alt="logo-amazonas"
         />
         <div className="ubicacion">
-          <p className="p-navbar">Hola,{loginSincrono}</p>
+          <p className="p-navbar">Hola</p>
           <button className="btn-navbar">
             <i class="far fa-map-marker-alt"></i> Elige tu dirección
           </button>

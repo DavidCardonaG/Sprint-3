@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import {eliminarAsincrono} from '../Actions/actionProducts'
+import {editarAsincrono} from '../Actions/actionProducts'
 import { Table } from 'react-bootstrap';
 import Footer from '../Components/Footer'
 import React from "react";
@@ -33,7 +34,7 @@ const ListarProductos = () => {
               <img src={pro.imagen} alt="im" />
             </td>
             <td>{pro.descripcion}</td>
-            <td><button className="editar">Editar</button></td>
+            <td onClick={()=>dispatch(editarAsincrono)}><button className="editar">Editar</button></td>
             <td onClick={()=>dispatch(eliminarAsincrono(pro.nombre))}><button className="eliminar">Eliminar</button></td>
             </tr>
         ))
