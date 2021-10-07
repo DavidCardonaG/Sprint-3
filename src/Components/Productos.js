@@ -115,7 +115,7 @@ import ListarProductos from '../Components/ListarProductos'
                             type="submit">Guardar</button>
                     </div>
                     <div>
-                        <button className="btn-cancelar"
+                        <button className="btn-cancelar" onClick={reset}
                         type="button">Cancelar</button>
                     </div>
 
